@@ -43,3 +43,33 @@ photoUpload();
 // Photo Uploaded
 // ["Profile Pic"]
 //  1
+
+
+// ASYNC AWAIT EXERCISE
+
+
+//Print on the console a random joke from the Chuck Norris API using Fetch and Async and Await
+
+// const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+// async function getJoke() {
+//     const response = await fetch(apiUrl);
+//     const data = await response.json();
+
+//     console.log(data.value);
+// }
+
+// getJoke();
+
+// USING DESTRUCTURING
+
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function getJoke() {
+    const response = await fetch(apiUrl);
+    const { value } = await response.json();
+
+    console.log(value);
+}
+
+getJoke();
